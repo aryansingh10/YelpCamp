@@ -22,7 +22,9 @@ module.exports.createCampground = async (req, res, next) => {
     res.redirect(`/campgrounds/${campground._id}`)
 }
 
-module.exports.showCampground = async (req, res,) => {
+const moment = require('moment');
+
+module.exports.showCampground = async (req, res) => {
     const campground = await Campground.findById(req.params.id).populate({
         path: 'reviews',
         populate: {
@@ -33,8 +35,15 @@ module.exports.showCampground = async (req, res,) => {
         req.flash('error', 'Cannot find that campground!');
         return res.redirect('/campgrounds');
     }
-    res.render('campgrounds/show', { campground });
+    
+    // Calculate the number of days since the campground was created
+    const createdAt = moment(campground.createdAt);
+    const now = moment();
+    const daysAgo = now.diff(createdAt, 'days');
+
+    res.render('campgrounds/show', { campground, daysAgo });
 }
+
 
 module.exports.renderEditForm = async (req, res) => {
     const { id } = req.params;

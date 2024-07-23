@@ -1,52 +1,47 @@
-<% layout('layouts/boilerplate')%>
-    <section class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1>Welcome to YELCPAMP</h1>
-                    <p>Your go-to platform for discovering and sharing great places to eat, shop, and more!</p>
-                    <a href="#" class="btn btn-primary">Get Started</a>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YelpCamp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+
+<body>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-left mb-0">YelpCamp</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-right">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                    <% if(!currentUser) { %>
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <% } else { %>
+                    <a class="nav-link" href="/logout">Logout</a>
+                    <% } %>
+                </nav>
             </div>
-        </div>
-    </section>
+        </header>
+        <main class="px-3">
+            <h1>YelpCamp</h1>
+            <p class="lead"> Welcome to YelpCamp! <br> Jump right in and explore our many campgrounds. <br>
+                Feel free to share some of your own and comment on others!</p>
+            <a href="/campgrounds" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
+                Campgrounds</a>
+        </main>
+    </div>
 
-    <section class="features">
-        <div class="container">
-            <h2 class="text-center">Our Features</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature text-center">
-                        <i class="fas fa-utensils fa-3x mb-3"></i>
-                        <h3>Find Great Restaurants</h3>
-                        <p>Discover amazing restaurants nearby and read reviews from real customers.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature text-center">
-                        <i class="fas fa-shopping-bag fa-3x mb-3"></i>
-                        <h3>Shop 'til You Drop</h3>
-                        <p>Explore local shops and boutiques to find unique items.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature text-center">
-                        <i class="fas fa-hiking fa-3x mb-3"></i>
-                        <h3>Outdoor Adventures</h3>
-                        <p>Plan your next outdoor adventure with our extensive list of activities.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Font Awesome JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

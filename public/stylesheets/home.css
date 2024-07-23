@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #f8f9fa;
+    background: url('./VENTANA\ CAMPGROUND\ -\ Updated\ 2024\ \ Reviews\ \(Big\ Sur\,\ CA\).jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h3 {
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+.nav-masthead .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 15px;
+}
+
+main h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+
+main p.lead {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+}
+
+main .btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: 2px solid #fff;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    opacity: 0.5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main .btn:hover {
+    background-color: #fff;
+    color: #2c3e50;
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h3,
+    .nav-masthead .nav-link {
+        text-align: center;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main h1 {
+        font-size: 2.5em;
+    }
+
+    main p.lead {
+        font-size: 1.2em;
+    }
+}
