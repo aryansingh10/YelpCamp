@@ -24,7 +24,7 @@
             <div class="mb-3">
                 <label class="form-label" for="price">Campground Price</label>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="price-label">$</span>
+                    <span class="input-group-text" id="price-label">₹</span>
                     <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
                         aria-describedby="price-label" name="campground[price]" required>
                     <div class="valid-feedback">
@@ -33,23 +33,12 @@
                 </div>
             </div>
 
-             <!-- <input type="file" name="image" id="image" class="form-control" multiple > -->
-            <!-- <div class="mb-3">
-                <label for="image" class="form-label">Image Url </label>
-                <input type="text" class="form-control" id="image" name="campground[image]" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div> -->
-
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
-                <textarea class="form-control" type="text" id="description" name="campground[description]" required>
-                </textarea>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
+                <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+                <div class="valid-feedback">Looks good!</div>
             </div>
+
 
             <div class="mb-3">
                 <div class="form-file custom-file">
@@ -59,12 +48,14 @@
                         <span class="form-file-button">Browse</span>
                     </label>
                 </div>
-
+        <br>
             <div class="mb-3">
                 <button class="btn btn-success">Add a Campground</button>
             </div>
 
         </form>
+
+        
         <a href="/campgrounds">All Campgrounds</a>
 
     </div>
